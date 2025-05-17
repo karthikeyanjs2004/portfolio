@@ -1,0 +1,108 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Linkedin, Github, Mail } from 'lucide-react';
+
+const Portfolio = () => {
+    return (
+        <div className="min-h-screen bg-gray-100 py-10 px-5">
+            {/* Header Section */}
+            <header className="text-center mb-16">
+                <motion.h1 className="text-5xl font-bold text-gray-800 mb-4" initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
+                    Hello, I'm Karthikeyan JS
+                </motion.h1>
+                <motion.p className="text-xl text-gray-600" initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
+                    Computer Science Engineering Student & Full Stack Developer
+                </motion.p>
+            </header>
+
+            {/* About Section */}
+            <Card className="mb-12 bg-white shadow-xl rounded-2xl max-w-4xl mx-auto">
+                <CardContent>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+                        <h2 className="text-3xl font-semibold text-gray-800 mb-4">About Me</h2>
+                        <p className="text-gray-600 text-lg">
+                            Motivated Computer Science Engineering student with a solid foundation in programming and software development. Proficient in Java and Full-Stack Development, with hands-on experience in web application development.
+                        </p>
+                    </motion.div>
+                </CardContent>
+            </Card>
+
+            {/* Education Section */}
+            <Card className="mb-12 bg-white shadow-xl rounded-2xl max-w-4xl mx-auto">
+                <CardContent>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+                        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Education</h2>
+                        <ul className="text-gray-600 text-lg list-disc pl-5">
+                            <li>SRM Easwari Engineering College, Chennai - B.E. Computer Science and Engineering (2021-2025, CGPA: 7.5)</li>
+                            <li>Evans Matric Higher Secondary School, Nagarcoil - Higher Secondary (2020-2021, 79.73%)</li>
+                            <li>Evans Matric Higher Secondary School, Nagarcoil - SSLC (2020-2021, 68.33%)</li>
+                        </ul>
+                    </motion.div>
+                </CardContent>
+            </Card>
+
+            {/* Skills Section */}
+            <Card className="mb-12 bg-white shadow-xl rounded-2xl max-w-4xl mx-auto">
+                <CardContent>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+                        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Technical Skills</h2>
+                        <ul className="text-gray-600 text-lg list-disc pl-5">
+                            <li>Programming Languages: Java (Advanced), Python (Basics)</li>
+                            <li>Web Development: HTML, CSS, JavaScript, React.js, UI/UX Design (Figma)</li>
+                            <li>Database Management: MySQL</li>
+                            <li>Operating Systems: Linux (RedHat Basics)</li>
+                            <li>Additional Skills: Problem Solving, Agile Methodology, Machine Learning Algorithms</li>
+                        </ul>
+                    </motion.div>
+                </CardContent>
+            </Card>
+
+          {/* Skills Section */}
+            <Card className="mb-12 bg-white shadow-xl rounded-2xl max-w-4xl mx-auto">
+                <CardContent>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+                        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Certifications</h2>
+                        <ul className="text-gray-600 text-lg list-disc pl-5">
+                            <li>JAVA SE 11 Developer Associate Level (EX25CJAP8118)</li>
+                            <li> Data science and Machine Learning Privacy and Security in Online Social Media Introduction to</li>
+                            <li>Industry 4.0 and Industrial IoT RedHat System Administration </li>
+                            <li>Linux system administration (Intern)</li>
+                            <li>Full Stack Web Development with Java </li>
+                        </ul>
+                    </motion.div>
+                </CardContent>
+            </Card>
+
+          {/* Skills Section */}
+            <Card className="mb-12 bg-white shadow-xl rounded-2xl max-w-4xl mx-auto">
+                <CardContent>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+                        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Language </h2>
+                        <ul className="text-gray-600 text-lg list-disc pl-5">
+                            <li>English (Read, Write and Speak)</li>
+                            <li>Tamil ( Read, Write and Speak )</li>
+                            <li>Malayalam ( Speak ) </li>
+                        </ul>
+                    </motion.div>
+                </CardContent>
+            </Card>
+
+            {/* Contact Section */}
+            <Card className="bg-white shadow-xl rounded-2xl max-w-4xl mx-auto">
+                <CardContent>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+                        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Contact Me</h2>
+                        <div className="flex gap-4">
+                            <Button className="flex items-center gap-2" onClick={() => window.open('https://www.linkedin.com/in/karthikeyan-js-8baab2295', '_blank')}><Linkedin /> LinkedIn</Button>
+                            <Button className="flex items-center gap-2" onClick={() => window.open('mailto:nsuriakala@gmail.com', '_blank')}><Mail /> Email</Button>
+                        </div>
+                    </motion.div>
+                </CardContent>
+            </Card>
+        </div>
+    );
+};
+
+export default Portfolio;
